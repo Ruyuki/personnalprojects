@@ -1,0 +1,17 @@
+Icones material design :
+https://design.google.com/icons/
+
+Angular material design :
+https://material.angularjs.org/latest/
+Taille des média :
+https://material.angularjs.org/latest/api/service/$mdMedia
+
+Palettes material design :
+https://www.google.com/design/spec/style/color.html#color-color-palette
+Elevation des elements :
+https://www.google.com/design/spec/what-is-material/elevation-shadows.html#elevation-shadows-elevation-android-
+
+Git repo :
+https://github.com/Ruyuki/personnalprojects
+Git sous NetBeans :
+https://netbeans.org/kb/docs/ide/git.html

@@ -26,23 +26,51 @@
     </head>
     <body>
         <div data-ng-controller="AppCtrl" data-ng-cloak>
-            <md-content>
-                <md-toolbar class="md-primary">
+            <section data-layout="row" data-flex>
+                <md-toolbar class="md-primary md-whiteframe-4dp">
                     <div class="md-toolbar-tools">
-                        <md-button class="md-icon-button" aria-label="Settings">
-                            <md-icon data-md-svg-icon="img/icons/menux24.svg"></md-icon>
+                        <md-button ng-click="toggleLeft()" data-hide-gt-sm class="md-icon-button" aria-label="Settings">
+                            <md-icon data-md-svg-icon="img/icons/menuwhite24.svg"></md-icon>
                         </md-button>
                         <h2>
-                            <span>Toolbar with Icon Buttons</span>
+                            <span>Chez Céc et Flo</span>
                         </h2>
                         <span data-flex></span>
                     </div>
-                </md-toolbar>
-                
-                <md-button class="md-primary">Click me</md-button>
-                <md-button class="md-accent">or maybe me</md-button>
-                <md-button class="md-warn">Careful</md-button>
-            </md-content>
+                </md-toolbar>                
+            </section>
+            <section data-layout="row" data-flex>
+                <md-sidenav class="md-sidenav-left md-whiteframe-16dp" data-md-component-id="left" data-md-is-locked-open="$mdMedia('gt-sm')">
+                    <md-toolbar>
+                        <h1 class="md-toolbar-tools">Apps</h1>
+                    </md-toolbar>
+                    <md-content data-ng-controller="LeftCtrl">
+                        <md-list>
+                            <md-list-item ng-click="close()" data-hide-gt-sm>
+                                <md-icon data-md-svg-icon="img/icons/closeblack24.svg"></md-icon>
+                                <p>Fermer</p>
+                            </md-list-item>
+                            <md-list-item ng-click="navigateTo('to do', $event)">
+                                <md-icon data-md-svg-icon="img/icons/doneblack24.svg"></md-icon>
+                                <p>To do</p>
+                            </md-list-item>
+                            <md-list-item ng-click="navigateTo('courses', $event)">
+                                <md-icon data-md-svg-icon="img/icons/listblack24.svg"></md-icon>
+                                <p>Courses</p>
+                            </md-list-item>
+                            <md-list-item ng-click="navigateTo('chats', $event)">
+                                <md-icon data-md-svg-icon="img/icons/catblack24.svg"></md-icon>
+                                <p>Chats</p>
+                            </md-list-item>
+                        </md-list>
+                    </md-content>
+                </md-sidenav>
+                <md-content data-flex>
+                    <md-button class="md-primary">Click me</md-button>
+                    <md-button class="md-accent">or maybe me</md-button>
+                    <md-button class="md-warn">Careful</md-button>
+                </md-content>
+            </section>
         </div>
     </body>
 </html>
