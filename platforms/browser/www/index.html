@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html data-ng-app="chezCecEtFlo">
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <title>Chez Céc et Flo</title>
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+        <script src="js/lib/angular.js" type="text/javascript"></script>
+        <script src="js/lib/angular-animate.js" type="text/javascript"></script>
+        <script src="js/lib/angular-aria.js" type="text/javascript"></script>
+        <script src="js/lib/angular-material.js" type="text/javascript"></script>
+        <script src="js/lib/angular-messages.js" type="text/javascript"></script>
+        <script src="js/lib/angular-mocks.js" type="text/javascript"></script>
+        <script src="js/lib/angular-route.js" type="text/javascript"></script>
+        <script src="js/lib/angular-sanitize.js" type="text/javascript"></script>
+        
+        <script src="js/app.js" type="text/javascript"></script>
+        
+        <link href="css/lib/angular-material.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div data-ng-controller="AppCtrl" data-ng-cloak>
+            <md-content>
+                <md-toolbar class="md-primary">
+                    <div class="md-toolbar-tools">
+                        <md-button class="md-icon-button" aria-label="Settings">
+                            <md-icon data-md-svg-icon="img/icons/menux24.svg"></md-icon>
+                        </md-button>
+                        <h2>
+                            <span>Toolbar with Icon Buttons</span>
+                        </h2>
+                        <span data-flex></span>
+                    </div>
+                </md-toolbar>
+                
+                <md-button class="md-primary">Click me</md-button>
+                <md-button class="md-accent">or maybe me</md-button>
+                <md-button class="md-warn">Careful</md-button>
+            </md-content>
+        </div>
+    </body>
+</html>

@@ -39,4 +39,4 @@ angular.module('chezCecEtFlo', ['ngMaterial'])
                 $log.debug("close LEFT is done");
             });
         };
-    })
+    });
