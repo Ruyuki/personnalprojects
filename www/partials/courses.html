@@ -1,2 +1,38 @@
 
-Courses
+<md-content>
+    <md-list ng-controller="CoursesCtrl" ng-cloak>
+        <md-subheader class="paddingTopBottomZero">
+            <md-input-container md-no-float class="md-block noMargin">
+                <md-icon md-svg-src="img/icons/searchblack24.svg"></md-icon>
+                <input ng-model="search.name" type="text" placeholder="Rechercher">
+            </md-input-container>
+        </md-subheader>
+        
+        <md-subheader class="paddingTopBottomZero">
+            <form name="addElementForm" ng-submit="valid() && addElement()" novalidate>
+                <div layout="row">
+                    <md-input-container flex="90" md-no-float class="md-block noMargin">
+                        <input ng-model="newElement.name" type="text" placeholder="Ajouter">
+                    </md-input-container>
+                    <md-button ng-disabled="!valid()" flex="10" type="submit" class="md-primary">
+                        <md-icon md-svg-src="img/icons/addblack24.svg"></md-icon>
+                    </md-button>
+                </div>
+            </form>
+        </md-subheader>
+        
+        <md-subheader ng-show="todoCoursesList.length === 0" class="md-no-sticky">(Vide)</md-subheader>
+        <md-list-item ng-repeat="element in coursesList | filter:{name:search.name, done:false} | orderBy:'name' as todoCoursesList">
+            <p> {{ element.name }} </p>
+            <md-checkbox class="md-secondary" ng-model="element.done"></md-checkbox>
+        </md-list-item>
+        
+        <md-divider></md-divider>
+        
+        <md-subheader class="md-no-sticky">Faits <span ng-show="doneCoursesList.length === 0">(Vide)</span></md-subheader>
+        <md-list-item ng-repeat="element in coursesList | filter:{name:search.name, done:true} | orderBy:'name' as doneCoursesList" class="selected">
+            <p> {{ element.name }} </p>
+            <md-checkbox class="md-secondary" ng-model="element.done"></md-checkbox>
+        </md-list-item>
+    </md-list>
+</md-content>

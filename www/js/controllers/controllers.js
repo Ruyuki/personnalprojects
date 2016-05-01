@@ -37,5 +37,29 @@ chezCecEtFlo.controller('CoursesCtrl', ['$scope', function ($scope) {
     $scope.globalData.currentAppName = 'Courses';
     $scope.globalData.currentAppId = 'courses';
     
+    $scope.newElement = {done : false};
+    
+    $scope.valid = function() {
+        var valid = false;
+        if ($scope.newElement.name !== undefined && $scope.newElement.name !== '') {
+            valid = true;
+        }
+        return valid;
+    };
+    
+    $scope.addElement = function() {
+        if ($scope.newElement.name !== undefined && $scope.newElement.name !== '') {
+            $scope.coursesList.push($scope.newElement);
+            $scope.newElement = {done : false};
+        }
+    };
+    
+    $scope.coursesList = [
+        {name : 'Salade', done : true},
+        {name : 'Coca', done : false},
+        {name : 'Fraises', done : false},
+        {name : 'Carottes', done : false},
+        {name : 'Sardines', done : false}
+    ];
 }]);
 

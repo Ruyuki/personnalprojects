@@ -1,2 +1,6 @@
 
 .selected { background: #E0E0E0; }
+
+.noMargin { margin: 0px; }
+
+.paddingTopBottomZero > .md-subheader-inner { padding-top: 0px; padding-bottom: 0px; }
