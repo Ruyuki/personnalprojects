@@ -6,12 +6,12 @@
         <param name="onload" value="true" />
     </feature>
     <allow-intent href="market:*" />
-    <name>HelloCordova</name>
+    <name>Chez Céc et Flo</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        L'application qui rend des services pour la gestion de notre maison.
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        Florent Dedieu
     </author>
     <content src="index.html" />
     <access origin="*" />
